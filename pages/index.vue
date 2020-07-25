@@ -2,6 +2,25 @@
 
   <div>
     <!-- 幻灯片 开始 -->
+    <!-- 幻灯片 开始 -->
+    <div v-swiper:mySwiper="swiperOption">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: #040B1B;">
+          <a target="_blank" href="/">
+            <img src="~/assets/photo/banner/1525939573202.jpg" alt="首页banner">
+          </a>
+        </div>
+        <div class="swiper-slide" style="background: #040B1B;">
+          <a target="_blank" href="/">
+            <img src="~/assets/photo/banner/1525939573202.jpg" alt="首页banner">
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-white"/>
+      <div slot="button-prev" class="swiper-button-prev swiper-button-white"/>
+      <div slot="button-next" class="swiper-button-next swiper-button-white"/>
+    </div>
+    <!-- 幻灯片 结束 -->
     <!-- 幻灯片 结束 -->
 
     <div id="aCoursesList">
@@ -15,7 +34,7 @@
           </header>
           <div>
             <article class="comm-course-list">
-              <ul class="of" id="bna">
+              <ul id="bna" class="of">
                 <li>
                   <div class="cc-l-wrap">
                     <section class="course-img">
@@ -237,7 +256,7 @@
                   </div>
                 </li>
               </ul>
-              <div class="clear"></div>
+              <div class="clear"/>
             </article>
             <section class="tac pt20">
               <a href="#" title="全部课程" class="comm-btn c-btn-2">全部课程</a>
@@ -338,7 +357,7 @@
                   </section>
                 </li>
               </ul>
-              <div class="clear"></div>
+              <div class="clear"/>
             </article>
             <section class="tac pt20">
               <a href="#" title="全部讲师" class="comm-btn c-btn-2">全部讲师</a>
@@ -352,7 +371,21 @@
 </template>
 
 <script>
-  export default {
-
+export default {
+  data() {
+    return {
+      swiperOption: {
+        // 配置分页
+        pagination: {
+          el: '.swiper-pagination'// 分页的dom节点
+        },
+        // 配置导航
+        navigation: {
+          nextEl: '.swiper-button-next', // 下一页dom节点
+          prevEl: '.swiper-button-prev'// 前一页dom节点
+        }
+      }
+    }
   }
+}
 </script>
