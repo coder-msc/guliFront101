@@ -43,6 +43,9 @@
 <script>
 import '~/assets/css/sign.css'
 import '~/assets/css/iconfont.css'
+import loginApi from '@/api/login'
+import cookie from 'js-cookie'
+
 export default {
   layout: 'sign',
 
@@ -57,7 +60,19 @@ export default {
   },
 
   methods: {
-
+    submitLogin() {
+      loginApi.submitLogin(this.user).then(response => {
+        // 将token放cookie中
+        cookie.set('guli_token', response.data.data.token, { domain: 'localhost' })
+        loginApi.getUserinfoBytoken().then(response => {
+          // 将userInfo放cookie中
+          this.loginInfo = response.data.data.userInfo
+          cookie.set('guli_ucenter', this.loginInfo, { domain: 'localhost' })
+          // 跳转至首页
+          window.location.href = '/'
+        })
+      })
+    },
     checkPhone(rule, value, callback) {
       // debugger
       if (!(/^1[34578]\d{9}$/.test(value))) {

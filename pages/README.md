@@ -5,4 +5,5 @@ The framework reads all the .vue files inside this directory and creates the rou
 
 More information about the usage of this directory in the documentation:
 https://nuxtjs.org/guide/routing
+# npm install js-cookie  需要安装cookie
 
