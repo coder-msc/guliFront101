@@ -18,8 +18,8 @@
                 <li>
                   <a title="全部" href="#">全部</a>
                 </li>
-                <li v-for="(item, index) in subjectNestedList" :key="index">
-                  <a :title="item.title" href="#">{{ item.title }}</a>
+                <li v-for="(item, index) in subjectNestedList" :key="index" :class="{active:oneIndex==index}">
+                  <a :title="item.title" href="#" @click="searchOne(item.id,index)">{{ item.title }}</a>
                 </li>
 
               </ul>
@@ -31,8 +31,8 @@
             </dt>
             <dd class="c-s-dl-li">
               <ul class="clearfix">
-                <li v-for="(item, index) in subSubjectList" :key="index">
-                  <a :title="item.title" href="#">{{ item.title }}</a>
+                <li v-for="(item, index) in subSubjectList" :key="index" :class="{active:twoIndex==index}">
+                  <a :title="item.title" href="#" @click="searchTwo(item.id,index)">{{ item.title }}</a>
                 </li>
 
               </ul>
@@ -154,6 +154,30 @@ export default {
         this.subjectNestedList = response.data.data.list
       })
     },
+    // 点击一级分类下的二级粉了
+    searchOne(subjectParentId, index) {
+      this.oneIndex = index
+      this.twoIndex = -1
+      this.searchObj.subjectParentId = subjectParentId
+      this.gotoPage(1)
+
+      for (let i = 0; i < this.subjectNestedList.length; i++) {
+        var oneSubject = this.subjectNestedList[i]
+        // eslint-disable-next-line eqeqeq
+        if (subjectParentId == oneSubject.id) {
+          this.subSubjectList = oneSubject.children
+        }
+      }
+    },
+    // 点击某个二级分类实现查询
+    searchTwo(subjectId, index) {
+      // 把index赋值,为了样式生效
+      this.twoIndex = index
+      // 把二级分类点击id值，赋值给searchObj
+      this.searchObj.subjectId = subjectId
+      // 点击某个二级分类进行条件查询
+      this.gotoPage(1)
+    },
     // 切换分页方法
     gotoPage(page) {
       courseApi.getCourseFront(page, 8, this.searchObj).then(response => {
@@ -163,3 +187,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+  .active {
+    background: #bdbdbd;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+</style>
