@@ -81,11 +81,11 @@
                   <section class="course-img">
                     <img :src="item.cover" :alt="item.title" class="img-responsive">
                     <div class="cc-mask">
-                      <a href="/course/1" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
-                    <a :title="item.title" href="/course/1" class="course-title fsize18 c-333">{{ item.title }}</a>
+                    <a :title="item.title" :href="'/course/'+item.id" class="course-title fsize18 c-333">{{ item.title }}</a>
                   </h3>
                   <section class="mt10 hLh20 of">
                     <span class="fr jgTag bg-green">
