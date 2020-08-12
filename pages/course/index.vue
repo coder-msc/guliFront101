@@ -49,15 +49,19 @@
           </section>
           <section class="fl">
             <ol class="js-tap clearfix">
-              <li>
-                <a title="关注度" href="#">关注度</a>
+              <li :class="{'current bg-orange':buyCountSort!=''}">
+                <a title="销量" href="javascript:void(0);" @click="searchBuyCount()">销量
+                  <span :class="{hide:buyCountSort==''}">↓</span>
+                </a>
               </li>
-              <li>
-                <a title="最新" href="#">最新</a>
+              <li :class="{'current bg-orange':gmtCreateSort!=''}">
+                <a title="最新" href="javascript:void(0);" @click="searchGmtCreate()">最新
+                  <span :class="{hide:gmtCreateSort==''}">↓</span>
+                </a>
               </li>
-              <li class="current bg-orange">
-                <a title="价格" href="#">价格&nbsp;
-                  <span>↓</span>
+              <li :class="{'current bg-orange':priceSort!=''}">
+                <a title="价格" href="javascript:void(0);" @click="searchPrice()">价格&nbsp;
+                  <span :class="{hide:priceSort==''}">↓</span>
                 </a>
               </li>
             </ol>
@@ -103,12 +107,34 @@
         <!-- 公共分页 开始 -->
         <div>
           <div class="paging">
-            <a class="undisable" title>首</a>
-            <a id="backpage" class="undisable" href="#" title>&lt;</a>
-            <a href="#" title class="current undisable">1</a>
-            <a href="#" title>2</a>
-            <a id="nextpage" href="#" title>&gt;</a>
-            <a href="#" title>末</a>
+            <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
+            <a
+              :class="{undisable: !data.hasPrevious}"
+              href="#"
+              title="首页"
+              @click.prevent="gotoPage(1)">首</a>
+            <a
+              :class="{undisable: !data.hasPrevious}"
+              href="#"
+              title="前一页"
+              @click.prevent="gotoPage(data.current-1)">&lt;</a>
+            <a
+              v-for="page in data.pages"
+              :key="page"
+              :class="{current: data.current == page, undisable: data.current == page}"
+              :title="'第'+page+'页'"
+              href="#"
+              @click.prevent="gotoPage(page)">{{ page }}</a>
+            <a
+              :class="{undisable: !data.hasNext}"
+              href="#"
+              title="后一页"
+              @click.prevent="gotoPage(data.current+1)">&gt;</a>
+            <a
+              :class="{undisable: !data.hasNext}"
+              href="#"
+              title="末页"
+              @click.prevent="gotoPage(data.pages)">末</a>
             <div class="clear"/>
           </div>
         </div>
@@ -183,6 +209,53 @@ export default {
       courseApi.getCourseFront(page, 8, this.searchObj).then(response => {
         this.data = response.data.data
       })
+    },
+    // 6 根据销量排序
+    searchBuyCount() {
+      // 设置对应变量值，为了样式生效
+      this.buyCountSort = '1'
+      this.gmtCreateSort = ''
+      this.priceSort = ''
+
+      // 把值赋值到searchObj
+      this.searchObj.buyCountSort = this.buyCountSort
+      this.searchObj.gmtCreateSort = this.gmtCreateSort
+      this.searchObj.priceSort = this.priceSort
+
+      // 调用方法查询
+      this.gotoPage(1)
+    },
+
+    // 7 最新排序
+    searchGmtCreate() {
+      // 设置对应变量值，为了样式生效
+      this.buyCountSort = ''
+      this.gmtCreateSort = '1'
+      this.priceSort = ''
+
+      // 把值赋值到searchObj
+      this.searchObj.buyCountSort = this.buyCountSort
+      this.searchObj.gmtCreateSort = this.gmtCreateSort
+      this.searchObj.priceSort = this.priceSort
+
+      // 调用方法查询
+      this.gotoPage(1)
+    },
+
+    // 8 价格排序
+    searchPrice() {
+      // 设置对应变量值，为了样式生效
+      this.buyCountSort = ''
+      this.gmtCreateSort = ''
+      this.priceSort = '1'
+
+      // 把值赋值到searchObj
+      this.searchObj.buyCountSort = this.buyCountSort
+      this.searchObj.gmtCreateSort = this.gmtCreateSort
+      this.searchObj.priceSort = this.priceSort
+
+      // 调用方法查询
+      this.gotoPage(1)
     }
   }
 }
