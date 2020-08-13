@@ -85,7 +85,8 @@
                   </h6>
                   <div class="course-txt-body-wrap">
                     <section class="course-txt-body">
-                      <p>
+
+                      <p v-html="courseWebVo.description">
                         {{ courseWebVo.description }}
                       </p>
                     </section>
@@ -101,22 +102,17 @@
                       <menu id="lh-menu" class="lh-menu mt10 mr10">
                         <ul>
                           <!-- 文件目录 -->
-                          <li class="lh-menu-stair">
-                            <a href="javascript: void(0)" title="第一章" class="current-1">
-                              <em class="lh-menu-i-1 icon18 mr10"/>第一章
+                          <li v-for="chapter in chapterVideoList" :key="chapter.id" class="lh-menu-stair">
+                            <a :title="chapter.title" href="javascript: void(0)" class="current-1">
+                              <em class="lh-menu-i-1 icon18 mr10"/>{{ chapter.title }}
                             </a>
                             <ol class="lh-menu-ol" style="display: block;">
-                              <li class="lh-menu-second ml30">
+                              <li v-for="video in chapter.children" :key="video.id" class="lh-menu-second ml30">
                                 <a href="#" title>
                                   <span class="fr">
                                     <i class="free-icon vam mr10">免费试听</i>
                                   </span>
-                                  <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>第一节
-                                </a>
-                              </li>
-                              <li class="lh-menu-second ml30">
-                                <a href="#" title class="current-2">
-                                  <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>第二节
+                                  <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>{{ video.title }}
                                 </a>
                               </li>
                             </ol>
@@ -142,14 +138,14 @@
                   <li>
                     <div class="u-face">
                       <a href="#">
-                        <img src="~/assets/photo/teacher/1442297969808.jpg" width="50" height="50" alt>
+                        <img :src="courseWebVo.avatar" width="50" height="50" alt>
                       </a>
                     </div>
                     <section class="hLh30 txtOf">
-                      <a class="c-333 fsize16 fl" href="#">周杰伦</a>
+                      <a class="c-333 fsize16 fl" href="#">{{ courseWebVo.teacherName }}</a>
                     </section>
                     <section class="hLh20 txtOf">
-                      <span class="c-999">毕业于北京大学数学系</span>
+                      <span class="c-999">{{ courseWebVo.intro }}</span>
                     </section>
                   </li>
                 </ul>
