@@ -8,6 +8,7 @@ const _7343150b = () => interopDefault(import('..\\pages\\login.vue' /* webpackC
 const _2c82381e = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
 const _29f8e57e = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
 const _9db86bbe = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
+const _cd37197e = () => interopDefault(import('..\\pages\\player\\_vid.vue' /* webpackChunkName: "pages/player/_vid" */))
 const _8e43a134 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
 const _acc91c18 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -47,6 +48,10 @@ export const routerOptions = {
     path: "/course/:id",
     component: _9db86bbe,
     name: "course-id"
+  }, {
+    path: "/player/:vid?",
+    component: _cd37197e,
+    name: "player-vid"
   }, {
     path: "/teacher/:id",
     component: _8e43a134,
