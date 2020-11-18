@@ -3,14 +3,22 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _2742bd79 = () => interopDefault(import('..\\pages\\course\\index.vue' /* webpackChunkName: "pages/course/index" */))
-const _7343150b = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _2c82381e = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
-const _29f8e57e = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
-const _9db86bbe = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
-const _cd37197e = () => interopDefault(import('..\\pages\\player\\_vid.vue' /* webpackChunkName: "pages/player/_vid" */))
-const _8e43a134 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
-const _acc91c18 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _9f27ce26 = () => interopDefault(import('..\\pages\\course\\index.vue' /* webpackChunkName: "pages/course/index" */))
+const _4347fcf7 = () => interopDefault(import('..\\pages\\friends\\index.vue' /* webpackChunkName: "pages/friends/index" */))
+const _5e2db702 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _ca241794 = () => interopDefault(import('..\\pages\\note\\index.vue' /* webpackChunkName: "pages/note/index" */))
+const _2d41a006 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages/register" */))
+const _740a0eec = () => interopDefault(import('..\\pages\\teacher\\index.vue' /* webpackChunkName: "pages/teacher/index" */))
+const _49cc7d71 = () => interopDefault(import('..\\pages\\tools\\index.vue' /* webpackChunkName: "pages/tools/index" */))
+const _77eb2038 = () => interopDefault(import('..\\pages\\wallpicture\\index.vue' /* webpackChunkName: "pages/wallpicture/index" */))
+const _30157295 = () => interopDefault(import('..\\pages\\course\\_id.vue' /* webpackChunkName: "pages/course/_id" */))
+const _68625dc2 = () => interopDefault(import('..\\pages\\friends\\_id.vue' /* webpackChunkName: "pages/friends/_id" */))
+const _3ab78c1e = () => interopDefault(import('..\\pages\\note\\_id.vue' /* webpackChunkName: "pages/note/_id" */))
+const _0eb04d66 = () => interopDefault(import('..\\pages\\player\\_vid.vue' /* webpackChunkName: "pages/player/_vid" */))
+const _18219572 = () => interopDefault(import('..\\pages\\teacher\\_id.vue' /* webpackChunkName: "pages/teacher/_id" */))
+const _088d2819 = () => interopDefault(import('..\\pages\\tools\\_id.vue' /* webpackChunkName: "pages/tools/_id" */))
+const _34985ec0 = () => interopDefault(import('..\\pages\\wallpicture\\_id.vue' /* webpackChunkName: "pages/wallpicture/_id" */))
+const _07418168 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -30,35 +38,67 @@ export const routerOptions = {
 
   routes: [{
     path: "/course",
-    component: _2742bd79,
+    component: _9f27ce26,
     name: "course"
   }, {
+    path: "/friends",
+    component: _4347fcf7,
+    name: "friends"
+  }, {
     path: "/login",
-    component: _7343150b,
+    component: _5e2db702,
     name: "login"
   }, {
+    path: "/note",
+    component: _ca241794,
+    name: "note"
+  }, {
     path: "/register",
-    component: _2c82381e,
+    component: _2d41a006,
     name: "register"
   }, {
     path: "/teacher",
-    component: _29f8e57e,
+    component: _740a0eec,
     name: "teacher"
   }, {
+    path: "/tools",
+    component: _49cc7d71,
+    name: "tools"
+  }, {
+    path: "/wallpicture",
+    component: _77eb2038,
+    name: "wallpicture"
+  }, {
     path: "/course/:id",
-    component: _9db86bbe,
+    component: _30157295,
     name: "course-id"
   }, {
+    path: "/friends/:id",
+    component: _68625dc2,
+    name: "friends-id"
+  }, {
+    path: "/note/:id",
+    component: _3ab78c1e,
+    name: "note-id"
+  }, {
     path: "/player/:vid?",
-    component: _cd37197e,
+    component: _0eb04d66,
     name: "player-vid"
   }, {
     path: "/teacher/:id",
-    component: _8e43a134,
+    component: _18219572,
     name: "teacher-id"
   }, {
+    path: "/tools/:id",
+    component: _088d2819,
+    name: "tools-id"
+  }, {
+    path: "/wallpicture/:id",
+    component: _34985ec0,
+    name: "wallpicture-id"
+  }, {
     path: "/",
-    component: _acc91c18,
+    component: _07418168,
     name: "index"
   }],
 

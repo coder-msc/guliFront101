@@ -2,57 +2,113 @@
   {
     "name": "course",
     "path": "/course",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\course\\\\index.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\course\\\\index.vue",
     "chunkName": "pages/course/index",
-    "_name": "_2742bd79"
+    "_name": "_9f27ce26"
+  },
+  {
+    "name": "friends",
+    "path": "/friends",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\friends\\\\index.vue",
+    "chunkName": "pages/friends/index",
+    "_name": "_4347fcf7"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\login.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\login.vue",
     "chunkName": "pages/login",
-    "_name": "_7343150b"
+    "_name": "_5e2db702"
+  },
+  {
+    "name": "note",
+    "path": "/note",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\note\\\\index.vue",
+    "chunkName": "pages/note/index",
+    "_name": "_ca241794"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\register.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\register.vue",
     "chunkName": "pages/register",
-    "_name": "_2c82381e"
+    "_name": "_2d41a006"
   },
   {
     "name": "teacher",
     "path": "/teacher",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\teacher\\\\index.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\teacher\\\\index.vue",
     "chunkName": "pages/teacher/index",
-    "_name": "_29f8e57e"
+    "_name": "_740a0eec"
+  },
+  {
+    "name": "tools",
+    "path": "/tools",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\tools\\\\index.vue",
+    "chunkName": "pages/tools/index",
+    "_name": "_49cc7d71"
+  },
+  {
+    "name": "wallpicture",
+    "path": "/wallpicture",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\wallpicture\\\\index.vue",
+    "chunkName": "pages/wallpicture/index",
+    "_name": "_77eb2038"
   },
   {
     "name": "course-id",
     "path": "/course/:id",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\course\\\\_id.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\course\\\\_id.vue",
     "chunkName": "pages/course/_id",
-    "_name": "_9db86bbe"
+    "_name": "_30157295"
+  },
+  {
+    "name": "friends-id",
+    "path": "/friends/:id",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\friends\\\\_id.vue",
+    "chunkName": "pages/friends/_id",
+    "_name": "_68625dc2"
+  },
+  {
+    "name": "note-id",
+    "path": "/note/:id",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\note\\\\_id.vue",
+    "chunkName": "pages/note/_id",
+    "_name": "_3ab78c1e"
   },
   {
     "name": "player-vid",
     "path": "/player/:vid?",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\player\\\\_vid.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\player\\\\_vid.vue",
     "chunkName": "pages/player/_vid",
-    "_name": "_cd37197e"
+    "_name": "_0eb04d66"
   },
   {
     "name": "teacher-id",
     "path": "/teacher/:id",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\teacher\\\\_id.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\teacher\\\\_id.vue",
     "chunkName": "pages/teacher/_id",
-    "_name": "_8e43a134"
+    "_name": "_18219572"
+  },
+  {
+    "name": "tools-id",
+    "path": "/tools/:id",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\tools\\\\_id.vue",
+    "chunkName": "pages/tools/_id",
+    "_name": "_088d2819"
+  },
+  {
+    "name": "wallpicture-id",
+    "path": "/wallpicture/:id",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\wallpicture\\\\_id.vue",
+    "chunkName": "pages/wallpicture/_id",
+    "_name": "_34985ec0"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "L:\\\\guliFront\\\\guliFront101\\\\pages\\\\index.vue",
+    "component": "D:\\\\Project\\\\guli_Front\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_acc91c18"
+    "_name": "_07418168"
   }
 ]

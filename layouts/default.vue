@@ -13,17 +13,17 @@
             <router-link to="/" tag="li" active-class="current" exact>
               <a>首页</a>
             </router-link>
-            <router-link to="/course" tag="li" active-class="current">
-              <a>课程</a>
+            <router-link to="/note" tag="li" active-class="current">
+              <a>笔记</a>
             </router-link>
-            <router-link to="/teacher" tag="li" active-class="current">
-              <a>名师</a>
+            <router-link to="/tools" tag="li" active-class="current">
+              <a>工具</a>
             </router-link>
-            <router-link to="/article" tag="li" active-class="current">
-              <a>文章</a>
+            <router-link to="/wallpicture" tag="li" active-class="current">
+              <a>壁纸</a>
             </router-link>
-            <router-link to="/qa" tag="li" active-class="current">
-              <a>问答</a>
+            <router-link to="/friends" tag="li" active-class="current">
+              <a>友链</a>
             </router-link>
           </ul>
           <!-- / nav -->
@@ -100,13 +100,13 @@
               <section class="b-f-link">
                 <a href="#" title="关于我们" target="_blank">关于我们</a>|
                 <a href="#" title="联系我们" target="_blank">联系我们</a>|
-                <a href="#" title="帮助中心" target="_blank">帮助中心</a>|
-                <a href="#" title="资源下载" target="_blank">资源下载</a>|
-                <span>服务热线：010-56253825(北京) 0755-85293825(深圳)</span>
-                <span>Email：info@atguigu.com</span>
+                <a href="#" title="资源下载" target="_blank">资源下载</a>
+                <br>
+                <span>服务热线：qq:59968873</span>
+                <span>Email：59968873@qq.com</span>
               </section>
               <section class="b-f-link mt10">
-                <span>©2018课程版权均归谷粒学院所有 京ICP备17055252号</span>
+                <span>©2020 此网站拥有者为个人.  京ICP备17055252号</span>
               </section>
             </section>
           </section>
